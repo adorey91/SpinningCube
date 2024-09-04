@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class Spinning : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private int x;
+    [SerializeField] private int y;
+    [SerializeField] private int z;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        transform.Rotate(new Vector3(x, y, z) * Time.deltaTime);
     }
 }
